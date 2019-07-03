@@ -17,7 +17,8 @@ To deploy resources using this terraform template follow the steps mentioned bel
 ```bash
 az account set --subscription="${SUBSCRIPTION_ID}"
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/${SUBSCRIPTION_ID}"
-
+```
+```bash
 echo "Setting environment variables for Terraform"
 export ARM_SUBSCRIPTION_ID=your_subscription_id
 export ARM_CLIENT_ID=your_appId
