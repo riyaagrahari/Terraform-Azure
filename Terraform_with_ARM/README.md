@@ -1,4 +1,4 @@
-# Terraform template to create Virtual Network, Subnet and assign NSG rules to it by embedding ARM template in terraform.
+# Terraform script to embedd ARM template in it , deploying Disaster Recovery Solution by creating replica of resources .
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 To deploy resources using this terraform template follow the steps mentioned below:
