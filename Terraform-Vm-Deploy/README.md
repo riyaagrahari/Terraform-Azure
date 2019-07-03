@@ -2,6 +2,7 @@
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 To deploy resources using this terraform template follow the steps mentioned below:
+
 <br />
 
 <a href="https://shell.azure.com" target="_blank">
