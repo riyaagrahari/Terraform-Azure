@@ -1,4 +1,4 @@
-# Terraform template to create Virtual Network, Subnet and assign NSG rules to it.
+# Terraform script to create Virtual Network, Subnet and assign NSG rules to it.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 To deploy resources using this terraform template follow the steps mentioned below:
