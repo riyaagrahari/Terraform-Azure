@@ -10,6 +10,7 @@ To deploy resources using this terraform template follow the steps mentioned bel
 </a>
 
 <br />
+<br/>
 
 - Click on the Launch Cloud Shell button,login with Azure credentials and select Bash shell there to open Azure CLI.
 - Upload vm.tf to deploy resources on Azure using terraform. Values to the variable are asked at runtime on CLI. 
