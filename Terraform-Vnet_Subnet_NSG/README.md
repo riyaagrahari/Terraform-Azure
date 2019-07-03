@@ -15,7 +15,6 @@ To deploy resources using this terraform template follow the steps mentioned bel
 - Upload Master.json ARM template so that Terraform can perform operation using it. 
 - [`Configure Terraform`](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure) if you are using Azure CLI on your local machine.
 - Deploy your template using following commands:
-
     - ```terraform init ```
     - ```terraform plan ``` 
     - ```terraform apply```
