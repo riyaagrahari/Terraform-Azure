@@ -11,8 +11,7 @@ To deploy resources using this terraform template follow the steps mentioned bel
 </br>
 
 - Click on the Launch Cloud Shell button,login with Azure credentials and select Bash shell there to open Azure CLI.
-- Upload Master.tf to deploy resources on Azure using terraform. At the end of this file, there is a parameter section, you can change the values to your desired parameter values. 
-- Upload Master.json ARM template so that Terraform can perform operation using it. 
+- Upload main.tf to deploy resources on Azure using terraform. Values to the variable are asked at runtime on CLI. 
 - [`Configure Terraform`](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure) if you are using Azure CLI on your local machine.
 - Deploy your template using following commands:
 
