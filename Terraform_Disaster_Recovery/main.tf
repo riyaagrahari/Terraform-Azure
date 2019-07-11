@@ -76,7 +76,7 @@ resource "azurerm_network_security_group" "deploy1"{
     protocol                   = "Tcp"
     source_address_prefix    = "*"
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address}"]
     destination_port_ranges    = ["80","443"]
     priority                   =  100
     direction                  = "Inbound"
@@ -85,9 +85,9 @@ resource "azurerm_network_security_group" "deploy1"{
     security_rule {
     name                       = "SSHandRDP-to-WEB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  110
     direction                  = "Inbound"
@@ -96,9 +96,9 @@ resource "azurerm_network_security_group" "deploy1"{
     security_rule {
     name                       = "API-Web-response"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "8083"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address}"]
     destination_port_range    = "8081"
     priority                   =  120
     direction                  = "Inbound"
@@ -107,9 +107,9 @@ resource "azurerm_network_security_group" "deploy1"{
   security_rule {
     name                       = "DenyOutBoundToDB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "*"
     priority                   =  100
     direction                  = "Outbound"
@@ -118,9 +118,9 @@ resource "azurerm_network_security_group" "deploy1"{
   security_rule {
     name                       = "Web-API-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address}"]
     source_port_range          = "8081"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_range    = "8083"
     priority                   =  110
     direction                  = "Outbound"
@@ -135,9 +135,9 @@ resource "azurerm_network_security_group" "deploy2"{
     security_rule {
     name                       = "Web-request-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address}"]
     source_port_range          = "8081"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_range    = "8083"
     priority                   =  100
     direction                  = "Inbound"
@@ -146,9 +146,9 @@ resource "azurerm_network_security_group" "deploy2"{
 security_rule {
     name                       = "SSHandRDP-to-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  110
     direction                  = "Inbound"
@@ -157,9 +157,9 @@ security_rule {
   security_rule {
     name                       = "FTPfromDB-to-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_range    = "21"
     priority                   =  120
     direction                  = "Inbound"
@@ -168,9 +168,9 @@ security_rule {
   security_rule {
     name                       = "API-MySQL-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "118"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "3306"
     priority                   =  100
     direction                  = "Outbound"
@@ -179,9 +179,9 @@ security_rule {
  security_rule {
     name                       = "API-Web-response"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "8083"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address}"]
     destination_port_range    = "8081"
     priority                   =  110
     direction                  = "Outbound"
@@ -190,9 +190,9 @@ security_rule {
     security_rule {
     name                       = "FTPtoDB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "21"
     priority                   =  120
     direction                  = "Outbound"
@@ -206,9 +206,9 @@ resource "azurerm_network_security_group" "deploy3"{
     security_rule {
     name                       = "API-DB-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "118"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "3306"
     priority                   =  100
     direction                  = "Inbound"
@@ -217,9 +217,9 @@ resource "azurerm_network_security_group" "deploy3"{
    security_rule {
     name                       = "DenyWeb-Database"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "*"
     priority                   =  110
     direction                  = "Inbound"
@@ -228,9 +228,9 @@ resource "azurerm_network_security_group" "deploy3"{
   security_rule {
     name                       = "SSHandRDP-from-admin-to-db"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  120
     direction                  = "Inbound"
@@ -239,9 +239,9 @@ resource "azurerm_network_security_group" "deploy3"{
     security_rule {
     name                       = "FTPfromAPI-DB-Inbound"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address}"]
     destination_port_range    = "21"
     priority                   =  130
     direction                  = "Inbound"
@@ -250,9 +250,9 @@ resource "azurerm_network_security_group" "deploy3"{
     security_rule {
     name                       = "MySQL-API--request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address}"]
     source_port_range          = "3306"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_range    = "118"
     priority                   =  100
     direction                  = "Outbound"
@@ -261,9 +261,9 @@ resource "azurerm_network_security_group" "deploy3"{
     security_rule {
     name                       = "FTPfromDB-API-Outbound"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address}"]
     destination_port_range    = "21"
     priority                   =  110
     direction                  = "Outbound"
@@ -272,9 +272,9 @@ resource "azurerm_network_security_group" "deploy3"{
    security_rule {
     name                       = "DenyConnectiontToWeb"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address}"]
     destination_port_range    = "*"
     priority                   =  120
     direction                  = "Outbound"
@@ -293,7 +293,7 @@ resource "azurerm_network_security_group" "deploy4"{
     protocol                   = "Tcp"
     source_address_prefix    = "*"
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address-replica}"]
     destination_port_ranges    = ["80","443"]
     priority                   =  100
     direction                  = "Inbound"
@@ -302,9 +302,9 @@ resource "azurerm_network_security_group" "deploy4"{
     security_rule {
     name                       = "SSHandRDP-to-WEB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address-replica}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  110
     direction                  = "Inbound"
@@ -313,9 +313,9 @@ resource "azurerm_network_security_group" "deploy4"{
     security_rule {
     name                       = "API-Web-response"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "8083"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address-replica}"]
     destination_port_range    = "8081"
     priority                   =  120
     direction                  = "Inbound"
@@ -324,9 +324,9 @@ resource "azurerm_network_security_group" "deploy4"{
   security_rule {
     name                       = "DenyOutBoundToDB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "*"
     priority                   =  100
     direction                  = "Outbound"
@@ -335,9 +335,9 @@ resource "azurerm_network_security_group" "deploy4"{
   security_rule {
     name                       = "Web-API-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address-replica}"]
     source_port_range          = "8081"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_range    = "8083"
     priority                   =  110
     direction                  = "Outbound"
@@ -352,9 +352,9 @@ resource "azurerm_network_security_group" "deploy5"{
     security_rule {
     name                       = "Web-request-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address-replica}"]
     source_port_range          = "8081"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_range    = "8083"
     priority                   =  100
     direction                  = "Inbound"
@@ -363,9 +363,9 @@ resource "azurerm_network_security_group" "deploy5"{
 security_rule {
     name                       = "SSHandRDP-to-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  110
     direction                  = "Inbound"
@@ -374,9 +374,9 @@ security_rule {
   security_rule {
     name                       = "FTPfromDB-to-API"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_range    = "21"
     priority                   =  120
     direction                  = "Inbound"
@@ -385,9 +385,9 @@ security_rule {
   security_rule {
     name                       = "API-MySQL-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "118"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "3306"
     priority                   =  100
     direction                  = "Outbound"
@@ -396,9 +396,9 @@ security_rule {
  security_rule {
     name                       = "API-Web-response"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "8083"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address-replica}"]
     destination_port_range    = "8081"
     priority                   =  110
     direction                  = "Outbound"
@@ -407,9 +407,9 @@ security_rule {
     security_rule {
     name                       = "FTPtoDB"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "21"
     priority                   =  120
     direction                  = "Outbound"
@@ -423,9 +423,9 @@ resource "azurerm_network_security_group" "deploy6"{
     security_rule {
     name                       = "API-DB-request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "118"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "3306"
     priority                   =  100
     direction                  = "Inbound"
@@ -434,9 +434,9 @@ resource "azurerm_network_security_group" "deploy6"{
    security_rule {
     name                       = "DenyWeb-Database"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    source_address_prefixes    = ["${var.subnet1-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "*"
     priority                   =  110
     direction                  = "Inbound"
@@ -445,9 +445,9 @@ resource "azurerm_network_security_group" "deploy6"{
   security_rule {
     name                       = "SSHandRDP-from-admin-to-db"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix}","${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
+    source_address_prefixes    = ["${var.Management-JumpBox_Subnet_AddressPrefix-Replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_ranges    = ["22","3389"]
     priority                   =  120
     direction                  = "Inbound"
@@ -456,9 +456,9 @@ resource "azurerm_network_security_group" "deploy6"{
     security_rule {
     name                       = "FTPfromAPI-DB-Inbound"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    source_address_prefixes    = ["${var.subnet2-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    destination_address_prefixes = ["${var.subnet3-address-replica}"]
     destination_port_range    = "21"
     priority                   =  130
     direction                  = "Inbound"
@@ -467,9 +467,9 @@ resource "azurerm_network_security_group" "deploy6"{
     security_rule {
     name                       = "MySQL-API--request"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address-replica}"]
     source_port_range          = "3306"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_range    = "118"
     priority                   =  100
     direction                  = "Outbound"
@@ -478,9 +478,9 @@ resource "azurerm_network_security_group" "deploy6"{
     security_rule {
     name                       = "FTPfromDB-API-Outbound"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet2-address}","${var.subnet2-address-replica}"]
+    destination_address_prefixes = ["${var.subnet2-address-replica}"]
     destination_port_range    = "21"
     priority                   =  110
     direction                  = "Outbound"
@@ -489,9 +489,9 @@ resource "azurerm_network_security_group" "deploy6"{
   security_rule {
     name                       = "DenyConnectiontToWeb"
     protocol                   = "Tcp"
-    source_address_prefixes    = ["${var.subnet3-address}","${var.subnet3-address-replica}"]
+    source_address_prefixes    = ["${var.subnet3-address-replica}"]
     source_port_range          = "*"
-    destination_address_prefixes = ["${var.subnet1-address}","${var.subnet1-address-replica}"]
+    destination_address_prefixes = ["${var.subnet1-address-replica}"]
     destination_port_range    = "*"
     priority                   =  120
     direction                  = "Outbound"
