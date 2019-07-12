@@ -11,6 +11,7 @@ To deploy resources using this terraform template follow the steps mentioned bel
 
 <br />
 <br/>
+
 ## Installation and Usage
 
 - Click on the Launch Cloud Shell button,login with Azure credentials and select Bash shell there to open Azure CLI.
