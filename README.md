@@ -8,4 +8,4 @@
 
 - It is a tool for Infrastructure As A code through which deployment of resources can be performed in few minutes using simple - configuration files in HashiCorp Configuration Lnaguage.<br/>
 
-- Terraform also supports Multi-cloud Deployment of resources using common HCL format.
+- Terraform has a multi-cloud support, which means it can be used for automating various clouds like Microsoft Azure, GCP, AWS etc, and deploy resources in them using the HashiCorp Configuration Language
