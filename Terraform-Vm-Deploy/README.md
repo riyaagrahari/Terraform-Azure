@@ -1,4 +1,4 @@
-# Terraform script to deploy a Linux Virtual Machine with Public ip, storage account and Vnet.
+# Deploy a Linux Virtual Machine with Public ip, storage account and Vnet with Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 To deploy resources using this terraform template follow the steps mentioned below:
