@@ -1,4 +1,4 @@
-# Linux Virtual Machine using Terraform.
+# Deploy Linux Virtual Machine using Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure.This Terraform sript deploys a Linux Virtual Machine with Public IP, Storage Account and Virtual Network along with it.
 To deploy resources using this terraform template follow the steps mentioned below:
