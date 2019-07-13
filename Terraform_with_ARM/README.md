@@ -1,7 +1,9 @@
 # Disaster Recovery Solution using ARM with Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
+
 This terraform script creates Web-API-Database three-tier architecture with specific network traffic security rules as Web is untrusted network, open to outside world, API is semi-trusted network as it communicates with both Web and DB and DB is fully-trusted network with no connection to Web.
+
 Web-API-Database is a 3 tier architecture which decouples to presentation, business or application and database layers induvidually. The business layer exposes its API to applications as well as for the remote presentation layer. Remote presentation layer uses REST API. There is a internal database API for communications between application layer and database layer. REST API’s input is processed by the application layer to perform CRUD operations on the database.
 <br />
 
