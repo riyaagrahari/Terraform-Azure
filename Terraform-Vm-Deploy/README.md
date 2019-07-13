@@ -4,6 +4,13 @@ Hashicorp Terraform is an Open source tool for provisioning and managing cloud i
 
 This Terraform script deploys a Linux Virtual Machine with Public IP, Storage Account and Virtual Network along with it.
 To deploy resources using this terraform template follow the steps mentioned below:
+<p align="center">
+<img src=".Diagrams/vm.jpg"></br>
+Figure 1.1: Working of the Architecture 
+</br></br>
+<img src="./Figures/ARCHF.jpg">
+Figure 1.2: Detailed Architecture in Azure
+</p>
 
 <br />
 
