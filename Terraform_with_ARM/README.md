@@ -1,4 +1,4 @@
-# Terraform script to embedd ARM template in it , deploying Disaster Recovery Solution.
+# Disaster Recovery Solution using ARM with Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 To deploy resources using this terraform template follow the steps mentioned below:
