@@ -4,7 +4,7 @@ Web-API-Database is a 3 tier architecture which decouples to presentation, busin
 <br />
 
 <p align="center">
-<img src="./WEB-API-DB.jpeg" height="450" width="300">
+<img src="./Diagrams/WEB-API-DB.jpeg" height="450" width="300">
 <br />
     <b> Figure 1.1: Three Tier Architecture </b>  
 </p>
