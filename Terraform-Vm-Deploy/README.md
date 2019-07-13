@@ -6,7 +6,7 @@ This Terraform script deploys a Linux Virtual Machine with Public IP, Storage Ac
 To deploy resources using this terraform template follow the steps mentioned below:
 <p align="center">
 <img src="./Diagrams/vm.jpg"></br>
-Figure 1.1: Architectural Diagram of the created Resources 
+<b>Figure 1.1: Architectural Diagram of the created Resources</b> 
 </br>
 </p>
 <br />
