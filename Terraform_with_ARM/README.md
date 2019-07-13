@@ -1,4 +1,4 @@
-# Disaster Recovery Solution using ARM with Terraform.
+# Disaster Recovery Solution with ARM Template in Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure. 
 
