@@ -1,5 +1,7 @@
 # Deploy Linux Virtual Machine using Terraform.
 
+Azure Linux Virtual Machines provides on-demand, high-scale, secure, virtualized infrastructure using Red Hat, Ubuntu, or any Linux distribution of your choice. It can be used to create, configure, manage, update, and scale Linux VMs
+
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure.
 
 This Terraform script deploys a Linux Virtual Machine with Public IP, Storage Account and Virtual Network along with it. VM  is installed with Ubuntu 16.04 Operating System  and the Storage Account created stores all Boot Diagonistic Logs.
