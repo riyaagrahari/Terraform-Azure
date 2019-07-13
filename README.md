@@ -1,6 +1,6 @@
 # Terraform-Azure
 <p align="center">
-<img src="./terraform.png" height="200" width="400">
+<img src="./Diagrams/terraform.png" height="200" width="400">
 <br />
 </p>
 
