@@ -8,7 +8,7 @@ Web-API-Database is a 3 tier architecture which decouples to presentation, busin
 <br />
 
 <p align="center">
-<img src="./WEB-API-DB.jpeg" height="450" width="300">
+<img src="./Diagrams/WEB-API-DB.jpeg" height="450" width="300">
 <br />
     <b> Figure 1.1: Three Tier Architecture </b>  
 </p>
@@ -31,7 +31,7 @@ In case of disaster, rules of NSG are appended opening custom ports on both Vnet
 Below is the architectural diagram for disaster recovery solution developed where a replica secondary vnet is created and peering is established between them
 
 <p align="center">
-<img src="./Architecture-DisasterRecovery.jpg">
+<img src=".Diagrams/Architecture-DisasterRecovery.jpg">
 <br />
     <b> Figure 1.3: Azure Architectural Diagram for Disaster Recovery Solution- Primary and Secondary Vnet. </b>
 </p>
