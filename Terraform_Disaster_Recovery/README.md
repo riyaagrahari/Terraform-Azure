@@ -13,7 +13,7 @@ Web-API-Database is a 3 tier architecture which decouples to presentation, busin
 This Terraform template creates a Virtual Network with 3 subnets (Webserver, API, Database). Further, Network Security Group are created for each and Inbound, Outbound rules are added to their respective NSG.
 For default values , you may refer to [`variables.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform_Disaster_Recovery/variables.tf) file.
 
-Below is the Architectural Diagram for the primary VNets and subnets which are created and network security rules are applied to subnets using NSG.
+Below is the Architectural Diagram for the primary VNet and subnets which are created and network security rules are applied to subnets using NSG.
 
 
 ![Azure](https://user-images.githubusercontent.com/24872414/61046464-d4de4a00-a3fa-11e9-8851-e9e19adfc128.jpg)
