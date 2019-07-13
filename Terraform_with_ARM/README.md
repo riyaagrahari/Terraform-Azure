@@ -31,7 +31,7 @@ In case of disaster, rules of NSG are appended opening custom ports on both Vnet
 Below is the architectural diagram for disaster recovery solution developed where a replica secondary vnet is created and peering is established between them
 
 <p align="center">
-<img src=".Diagrams/Architecture-DisasterRecovery.jpg">
+<img src="./Diagrams/Architecture-DisasterRecovery.jpg">
 <br />
     <b> Figure 1.3: Azure Architectural Diagram for Disaster Recovery Solution- Primary and Secondary Vnet. </b>
 </p>
