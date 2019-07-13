@@ -13,3 +13,9 @@
 - It codifies APIs into declarative configuration script that can be shared, edited, reviewed and versioned in a team.
 
 - Configuration made using Terraform can be easily reproduced to multiple locations to save time.
+
+## License
+This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/LICENSE) file for details
+
+## Author
+[`Riya Agrahari`](https://github.com/riyaagrahari/)<br />
