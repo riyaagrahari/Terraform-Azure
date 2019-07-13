@@ -11,7 +11,7 @@ variable "resource_group_name-replica" {
      default     = "first-rg-replica"
 }
 variable "location-replica" {
-    description = "Location for all resources to be deployed"
+    description = "Location for Replica resources to be deployed"
 }
 variable "vnet_name" {
     description = "Name of Primary Vnet"
