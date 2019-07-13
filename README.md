@@ -14,6 +14,8 @@
 
 - Configuration made using Terraform can be easily reproduced to multiple locations to save time.
 
+#### This repository contains code to provision resources (Resource Group, Virtual Network, Sub-Networks, Network Security Groups and Rules, Peering Connection) through ARM Templates in Azure.
+
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/LICENSE) file for details
 
