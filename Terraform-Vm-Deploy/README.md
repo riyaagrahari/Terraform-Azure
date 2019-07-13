@@ -2,7 +2,7 @@
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure.
 
-This Terraform script deploys a Linux Virtual Machine with Public IP, Storage Account and Virtual Network along with it.
+This Terraform script deploys a Linux Virtual Machine with Public IP, Storage Account and Virtual Network along with it. VM  is installed with Ubuntu 16.04 Operating System  and the Storage Account created stores all Boot Diagonistic Logs.
 
 <p align="center">
 <img src="./Diagrams/vm.jpg"></br>
