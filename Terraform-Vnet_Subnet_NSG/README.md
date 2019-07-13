@@ -1,4 +1,4 @@
-# Virtual Network with Subnet and NSG using.
+# Virtual Network with Subnet and NSG using Terraform.
 
 Hashicorp Terraform is an Open source tool for provisioning and managing cloud infrastructure.This Terraform script creates a Virtual Network with Sub-Networks and Network Security Group associated to it. 
 To deploy resources using this terraform template follow the steps mentioned below:
