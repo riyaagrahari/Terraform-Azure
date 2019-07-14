@@ -23,3 +23,8 @@ To deploy resources using this terraform template follow the steps mentioned bel
     - ```terraform init ```
     - ```terraform plan ``` 
     - ```terraform apply```
+    
+## License
+This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/LICENSE) file for details
+## Author
+[`Riya Agrahari`](https://github.com/riyaagrahari/)<br />
