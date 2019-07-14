@@ -69,7 +69,7 @@ export ARM_ENVIRONMENT=public
     - ```terraform init ```
     - ```terraform plan ``` 
     - ```terraform apply```
-## Update existing NSG RULE
+## Update existing NSG Rule
 In case of disaster, rules of NSG for Database Subnet are appended opening custom ports on both Vnet, allowing database synchronization from secondary to primary region.
 
 This can be done by loading the powershell.ps1 on the Azure powershell.
