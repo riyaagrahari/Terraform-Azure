@@ -1,10 +1,3 @@
-# Configure the Microsoft Azure Provider
-provider "azurerm" {
-    subscription_id = "e65ce201-f8c1-4485-8016-5b9a171dad0c"
-    client_id       = "5694a60e-b0fb-426f-a42c-01013c153a8f"
-    client_secret   = "4dcb538a-7ac4-4744-88ba-78f967e5e408"
-    tenant_id       = "09b9a1df-2805-4996-9399-b0b788d5167f"
-}
 
 # Create a resource group if it doesn’t exist
 resource "azurerm_resource_group" "test-RG" {

@@ -42,7 +42,7 @@ variable "user_name" {
     //default     = "AdminAzure"
 }
 variable "user_password" {
-    description = "Name of user"
+    description = "Password of user"
     //default     = "Pass!1234"
 }
 
