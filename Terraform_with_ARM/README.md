@@ -29,7 +29,10 @@ Below is the Architectural Diagram for the primary VNets and subnets which are c
 </p>
 Replica of the primary vnet with its subnets and NSGs are created at some secondary location which comes up as recovery solution in case of a disaster. Communication between these Vnets is established using global peering.
 
-In case of disaster, rules of NSG are appended opening custom ports on both Vnet, allowing database synchronization from secondary to primary region.<br />
+Rules of NSG for Database Subnet are appended opening custom ports on both Vnet, allowing database synchronization from between primary and secondary Databases.
+
+So if Disaster occures, recovery can be made by backed up data from seconadary to primary Database.<br />
+
 Below is the architectural diagram for disaster recovery solution developed where a replica secondary vnet is created and peering is established between them
 
 <p align="center">
@@ -67,6 +70,8 @@ In case of disaster, rules of NSG for Database Subnet are appended opening custo
 
 This can be done by loading the [`powershell.ps1`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform_with_ARM/powershell.ps1) on the Azure powershell.
 Change the values of Resource Group and NSG for database primary and secondary Subnet as per your existing resources , Upload the powershell script, cd to get into your home directory then run the powershell script.
+
+So if Disaster occures, recovery can be made by backed up data from seconadary to primary Database.
 
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/LICENSE) file for details
