@@ -53,7 +53,9 @@ To deploy resources using terraform template follow the steps mentioned below:
 <br/>
 
 - Click on the Launch Cloud Shell button,login with Azure credentials and select Bash shell there to open Azure CLI.
-- Upload [`vm.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform-Vm-Deploy/vm.tf) to deploy resources on Azure using terraform. Values to the variable are asked at runtime on CLI.( upload [`variables.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform-Vm-Deploy/variables.tf) ) 
+- Upload [`vm.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform-Vm-Deploy/vm.tf) to deploy resources on Azure using terraform.
+- Upload [`variables.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform-Vm-Deploy/variables.tf). Default values are already present in this file. If you want to give your own values, you can change the values as per your requirement.
+- Values to the variable can also be asked as input at runtime on CLI. (Upload [`variables.tf`](https://github.com/riyaagrahari/Terraform-Azure/blob/master/Terraform-Vm-Deploy/variables.tf) and comment all default values in it) 
 - [`Configure Terraform`](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure) if you are using Azure CLI on your local machine.
 - Use following Commands on Azure CLI for getting your subscription_id, client_id, client_secret,tenant_id to add in this template.
 ```bash
