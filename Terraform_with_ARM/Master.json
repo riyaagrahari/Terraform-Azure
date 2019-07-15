@@ -5,121 +5,110 @@
 		"Location-of-Virtual_Network1": {
 			"type": "string"
 		},
-		"Virtual_Network1-name": {
+		"Virtual_Network1_name": {
 			"type": "string",
-			"defaultValue": "Vnet-1",
 			"metadata": {
-
 				"description": "Name of First Virtual Network"
 			}
 		},
-		"Vnet1addressPrefix": {
+		"Vnet1_address_Prefix": {
 			"type": "string",
 			"defaultValue": "10.0.0.0/16",
 			"metadata": {
-				"description": "Adress range for the Virtual_Network1-name."
+				"description": "Adress range for the Virtual_Network1_name."
 			}
 		},
-		"subnet1-name": {
-			"type": "string",
-			"defaultValue": "subnet-1"
+		"subnet1_name": {
+			"type": "string"
 
 		},
-		"subnet1-AddressPrefix": {
+		"subnet1_Address_Prefix": {
 			"type": "string",
 			"defaultValue": "10.0.1.0/24",
 			"metadata": {
 				"description": "Address range for first subnet."
 			}
 		},
-		"subnet2-name": {
-			"type": "string",
-			"defaultValue": "subnet-2"
+		"subnet2_name": {
+			"type": "string"
 		},
-		"subnet2-AddressPrefix": {
+		"subnet2_Address_Prefix": {
 			"type": "string",
 			"defaultValue": "10.0.2.0/24",
 			"metadata": {
 				"description": "Address range for second subnet"
 			}
 		},
-		"subnet3-name": {
-			"type": "string",
-			"defaultValue": "subnet-3"
+		"subnet3_name": {
+			"type": "string"
 		},
-		"subnet3-AddressPrefix": {
+		"subnet3_Address_Prefix": {
 			"type": "string",
 			"defaultValue": "10.0.3.0/24",
 			"metadata": {
 				"description": "Address range for third subnet"
 			}
 		},
-		"firewallSubnet-AddressPrefix-Vnet1": {
+		"firewallSubnet_AddressPrefix_Vnet1": {
 			"type": "string",
 			"defaultValue": "10.0.4.0/24",
 			"metadata": {
 				"description": "Address range for firewall subnet"
 			}
 		},
-		"Management-JumpBox_Subnet_Name": {
-			"type": "string",
-			"defaultValue": "admin"
+		"Management_JumpBox_Subnet_Name": {
+			"type": "string"
 		},
-		"Management-JumpBox_Subnet_AddressPrefix": {
+		"Management_JumpBox_Subnet_AddressPrefix": {
 			"type": "string",
 			"defaultValue": "10.0.5.0/24",
 			"metadata": {
 				"description": "Address range for third subnet"
 			}
 		},
-		"Virtual_Network2-name": {
+		"Virtual_Network2_name": {
 			"type": "string",
-			"defaultValue": "Vnet-2",
 			"metadata": {
 
 				"description": "This is the name of the second Vnet to be created."
 			}
 		},
-
-		"Vnet2addressPrefix": {
+		"Vnet2_address_Prefix": {
 			"type": "string",
 			"defaultValue": "20.0.0.0/16",
 			"metadata": {
 				"description": "Address range for the Vnet2."
 			}
 		},
-		"Location-of-Virtual_Network2": {
+		"Location_of_Virtual_Network2": {
 			"type": "string"
 		},
 
-		"subnet1-Name-Vnet2": {
-			"type": "string",
-			"defaultValue": "subnet-1-replica"
+		"subnet1_name_Vnet2": {
+			"type": "string"
 
 		},
-		"subnet1-AddressPrefix-Vnet2": {
+		"subnet1_Address_Prefix_Vnet2": {
 			"type": "string",
 			"defaultValue": "20.0.1.0/24",
 			"metadata": {
 				"description": "Address range for first subnet."
 			}
 		},
-		"subnet2-Name-Vnet2": {
-			"type": "string",
-			"defaultValue": "subnet-2-replica"
+		"subnet2_name_Vnet2": {
+			"type": "string"
 		},
-		"subnet2-AddressPrefix-Vnet2": {
+		"subnet2_Address_Prefix_Vnet2": {
 			"type": "string",
 			"defaultValue": "20.0.2.0/24",
 			"metadata": {
 				"description": "Address range for second subnet"
 			}
 		},
-		"subnet3-Name-Vnet2": {
-			"type": "string",
-			"defaultValue": "subnet-3-replica"
+		"subnet3_name_Vnet2": {
+			"type": "string"
 		},
-		"subnet3-AddressPrefix-Vnet2": {
+		"subnet3_Address_Prefix_Vnet2": {
 			"type": "string",
 			"defaultValue": "20.0.3.0/24",
 			"metadata": {
@@ -127,7 +116,7 @@
 			}
 		},
 
-		"firewallSubnet-AddressPrefix-Vnet2": {
+		"firewallSubnet_AddressPrefix_Vnet2": {
 			"type": "string",
 			"defaultValue": "20.0.4.0/24",
 			"metadata": {
@@ -135,48 +124,47 @@
 			}
 		},
 
-		"Management-JumpBox_Subnet_Name-Vnet2": {
-			"type": "string",
-			"defaultValue": "admin-replica"
+		"Management_JumpBox_Subnet_Name_Vnet2": {
+			"type": "string"
 		},
-		"Management-JumpBox_Subnet_AddressPrefix-Vnet2": {
+		"Management_JumpBox_Subnet_AddressPrefix_Vnet2": {
 			"type": "string",
 			"defaultValue": "20.0.5.0/24",
 			"metadata": {
 				"description": "Address range for jumbox subnet of Vnet2"
 			}
 		},
-		"NSG1-name": {
+		"NSG1_name": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of first security group"
 			}
 		},
-		"NSG2-name": {
+		"NSG2_name": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of second security group"
 			}
 		},
-		"NSG3-name": {
+		"NSG3_name": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of third security group"
 			}
 		},
-		"NSG1-name-replica": {
+		"NSG1_name_replica": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of first security group"
 			}
 		},
-		"NSG2-name-replica": {
+		"NSG2_name_replica": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of second security group"
 			}
 		},
-		"NSG3-name-replica": {
+		"NSG3_name_replica": {
 			"type": "string",
 			"metadata": {
 				"description": "Name of third security group"
@@ -184,18 +172,17 @@
 		},
 		
 		"enableDdosProtection": {
-			"type": "bool",
-			"defaultValue": false
+			"type": "bool"
 		},
 
-		"virtual-Network-Access": {
+		"virtual_Network_Access": {
 			"type": "bool",
 			"defaultValue": true,
 			"metadata": {
 				"description": "Allow access to the virtual networks."
 			}
 		},
-		"forwarded-Traffic": {
+		"forwarded_Traffic": {
 			"type": "bool",
 			"defaultValue": false,
 			"metadata": {
@@ -213,13 +200,16 @@
 			"type": "bool",
 			"defaultValue": false,
 			"metadata": {
-				"description": "To allow traffic from Virtual_Network1-name to Vnet2 through the gateway of Vnet2"
+				"description": "To allow traffic from Virtual_Network1_name to Vnet2 through the gateway of Vnet2"
 			}
 		}
 
 	},
 
-	"resources": [{
+
+	"resources": [
+		{
+
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-05-01",
 			"name": "LinkedTemplate1",
@@ -233,50 +223,74 @@
 					"Location": {
 						"value": "[parameters('Location-of-Virtual_Network1')]"
 					},
-					"NSG1-name": {
-						"value": "[parameters('NSG1-name')]"
+					"NSG1_name": {
+						"value": "[parameters('NSG1_name')]"
 					},
-					"NSG2-name": {
-						"value": "[parameters('NSG2-name')]"
+					"NSG2_name": {
+						"value": "[parameters('NSG2_name')]"
 					},
-					"NSG3-name": {
-						"value": "[parameters('NSG3-name')]"
+					"NSG3_name": {
+						"value": "[parameters('NSG3_name')]"
 					},
-					"subnet1-AddressPrefix": {
-						"value": "[parameters('subnet1-AddressPrefix')]"
+					"subnet1_Address_Prefix": {
+						"value": "[parameters('subnet1_Address_Prefix')]"
 					},
-					"subnet2-AddressPrefix": {
-						"value": "[parameters('subnet2-AddressPrefix')]"
+					"subnet2_Address_Prefix": {
+						"value": "[parameters('subnet2_Address_Prefix')]"
 					},
-					"subnet3-AddressPrefix": {
-						"value": "[parameters('subnet3-AddressPrefix')]"
+					"subnet3_Address_Prefix": {
+						"value": "[parameters('subnet3_Address_Prefix')]"
 					},
-					"subnet1-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet1-AddressPrefix-Vnet2')]"
-					},
-					"subnet2-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet2-AddressPrefix-Vnet2')]"
-					},
-					"subnet3-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet3-AddressPrefix-Vnet2')]"
-					},
-
-					"Management-JumpBox_Subnet_AddressPrefix": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix')]"
-					},
-					"Management-JumpBox_Subnet_AddressPrefix-Vnet2": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix-Vnet2')]"
+					"Management_JumpBox_Subnet_AddressPrefix": {
+						"value": "[parameters('Management_JumpBox_Subnet_AddressPrefix')]"
 					}
+				}
+			}
+		},
+		{
 
-
-
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"name": "LinkedTemplate2",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/riyaagrahari/ARM-Templates/master/NestedTemplate_for_DisasterRecovery/CreateNSG.json",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"Location": {
+						"value": "[parameters('Location_of_Virtual_Network2')]"
+					},
+					"NSG1_name": {
+						"value": "[parameters('NSG1_name_replica')]"
+					},
+					"NSG2_name": {
+						"value": "[parameters('NSG2_name_replica')]"
+					},
+					"NSG3_name": {
+						"value": "[parameters('NSG3_name_replica')]"
+					},
+					"subnet1_Address_Prefix": {
+						"value": "[parameters('subnet1_Address_Prefix_Vnet2')]"
+					},
+					"subnet2_Address_Prefix": {
+						"value": "[parameters('subnet2_Address_Prefix_Vnet2')]"
+					},
+					"subnet3_Address_Prefix": {
+						"value": "[parameters('subnet3_Address_Prefix_Vnet2')]"
+					},
+					"Management_JumpBox_Subnet_AddressPrefix": {
+						"value": "[parameters('Management_JumpBox_Subnet_AddressPrefix_Vnet2')]"
+					}
+					
 				}
 			}
 		},
 		{
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-05-01",
-			"name": "LinkedTemplate2",
+			"name": "LinkedTemplate3",
 			"dependsOn": ["LinkedTemplate1"],
 
 			"properties": {
@@ -286,51 +300,50 @@
 					"contentVersion": "1.0.0.0"
 				},
 				"parameters": {
-					"Virtual_Network1-name": {
-						"value": "[parameters('Virtual_Network1-name')]"
+					"Virtual_Network1_name": {
+						"value": "[parameters('Virtual_Network1_name')]"
+					},
+					"Vnet1_address_Prefix": {
+						"value": "[parameters('Vnet1_address_Prefix')]"
 					},
 					"Location": {
 						"value": "[parameters('Location-of-Virtual_Network1')]"
 					},
-					"NSG1-name": {
-						"value": "[parameters('NSG1-name')]"
+					"NSG1_name": {
+						"value": "[parameters('NSG1_name')]"
 					},
-					"NSG2-name": {
-						"value": "[parameters('NSG2-name')]"
+					"NSG2_name": {
+						"value": "[parameters('NSG2_name')]"
 					},
-					"NSG3-name": {
-						"value": "[parameters('NSG3-name')]"
+					"NSG3_name": {
+						"value": "[parameters('NSG3_name')]"
 					},
-					"subnet1-name": {
-						"value": "[parameters('subnet1-name')]"
+					"subnet1_name": {
+						"value": "[parameters('subnet1_name')]"
 					},
-					"subnet2-name": {
-						"value": "[parameters('subnet2-name')]"
+					"subnet2_name": {
+						"value": "[parameters('subnet2_name')]"
 					},
-					"subnet3-name": {
-						"value": "[parameters('subnet3-name')]"
+					"subnet3_name": {
+						"value": "[parameters('subnet3_name')]"
 					},
-					"subnet1-AddressPrefix": {
-						"value": "[parameters('subnet1-AddressPrefix')]"
+					"subnet1_Address_Prefix": {
+						"value": "[parameters('subnet1_Address_Prefix')]"
 					},
-					"subnet2-AddressPrefix": {
-						"value": "[parameters('subnet2-AddressPrefix')]"
+					"subnet2_Address_Prefix": {
+						"value": "[parameters('subnet2_Address_Prefix')]"
 					},
-					"subnet3-AddressPrefix": {
-						"value": "[parameters('subnet3-AddressPrefix')]"
+					"subnet3_Address_Prefix": {
+						"value": "[parameters('subnet3_Address_Prefix')]"
 					},
-					"Vnet1addressPrefix": {
-						"value": "[parameters('Vnet1addressPrefix')]"
+					"Management_JumpBox_Subnet_Name": {
+						"value": "[parameters('Management_JumpBox_Subnet_Name')]"
 					},
-
-					"firewallSubnet-AddressPrefix": {
-						"value": "[parameters('firewallSubnet-AddressPrefix-Vnet1')]"
+					"Management_JumpBox_Subnet_AddressPrefix": {
+						"value": "[parameters('Management_JumpBox_Subnet_AddressPrefix')]"
 					},
-					"Management-JumpBox_Subnet_Name": {
-						"value": "[parameters('Management-JumpBox_Subnet_Name')]"
-					},
-					"Management-JumpBox_Subnet_AddressPrefix": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix')]"
+					"firewallSubnet_AddressPrefix": {
+						"value": "[parameters('firewallSubnet_AddressPrefix_Vnet1')]"
 					},
 					"enableDdosProtection": {
 						"value": "[parameters('enableDdosProtection')]"
@@ -342,63 +355,8 @@
 		{
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-05-01",
-			"name": "LinkedTemplate5",
-			"properties": {
-				"mode": "Incremental",
-				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/riyaagrahari/ARM-Templates/master/NestedTemplate_for_DisasterRecovery/CreateNSG.json",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"Location": {
-						"value": "[parameters('Location-of-Virtual_Network2')]"
-					},
-					"NSG1-name": {
-						"value": "[parameters('NSG1-name-replica')]"
-					},
-					"NSG2-name": {
-						"value": "[parameters('NSG2-name-replica')]"
-					},
-					"NSG3-name": {
-						"value": "[parameters('NSG3-name-replica')]"
-					},
-					"subnet1-AddressPrefix": {
-						"value": "[parameters('subnet1-AddressPrefix')]"
-					},
-					"subnet2-AddressPrefix": {
-						"value": "[parameters('subnet2-AddressPrefix')]"
-					},
-					"subnet3-AddressPrefix": {
-						"value": "[parameters('subnet3-AddressPrefix')]"
-					},
-					"subnet1-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet1-AddressPrefix-Vnet2')]"
-					},
-					"subnet2-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet2-AddressPrefix-Vnet2')]"
-					},
-					"subnet3-AddressPrefix-Vnet2": {
-						"value": "[parameters('subnet3-AddressPrefix-Vnet2')]"
-					},
-
-					"Management-JumpBox_Subnet_AddressPrefix": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix')]"
-					},
-					"Management-JumpBox_Subnet_AddressPrefix-Vnet2": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix-Vnet2')]"
-					}
-
-
-
-				}
-			}
-		},
-
-		{
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2018-05-01",
-			"name": "LinkedTemplate3",
-			"dependsOn": ["LinkedTemplate1","LinkedTemplate5"],
+			"name": "LinkedTemplate4",
+			"dependsOn": ["LinkedTemplate2","LinkedTemplate3"],
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
@@ -406,50 +364,50 @@
 					"contentVersion": "1.0.0.0"
 				},
 				"parameters": {
-					"Virtual_Network1-name": {
-						"value": "[parameters('Virtual_Network2-name')]"
+					"Virtual_Network1_name": {
+						"value": "[parameters('Virtual_Network2_name')]"
 					},
-					"Vnet1addressPrefix": {
-						"value": "[parameters('Vnet2addressPrefix')]"
+					"Vnet1_address_Prefix": {
+						"value": "[parameters('Vnet2_address_Prefix')]"
 					},
 					"Location": {
-						"value": "[parameters('Location-of-Virtual_Network2')]"
+						"value": "[parameters('Location_of_Virtual_Network2')]"
 					},
-					"subnet1-Name": {
-						"value": "[parameters('subnet1-Name-Vnet2')]"
+					"subnet1_name": {
+						"value": "[parameters('subnet1_name_Vnet2')]"
 					},
-					"subnet2-Name": {
-						"value": "[parameters('subnet2-Name-Vnet2')]"
+					"subnet2_name": {
+						"value": "[parameters('subnet2_name_Vnet2')]"
 					},
-					"subnet3-Name": {
-						"value": "[parameters('subnet3-Name-Vnet2')]"
+					"subnet3_name": {
+						"value": "[parameters('subnet3_name_Vnet2')]"
 					},
-					"NSG1-name": {
-						"value": "[parameters('NSG1-name-replica')]"
+					"subnet1_Address_Prefix": {
+						"value": "[parameters('subnet1_Address_Prefix_Vnet2')]"
 					},
-					"NSG2-name": {
-						"value": "[parameters('NSG2-name-replica')]"
+					"subnet2_Address_Prefix": {
+						"value": "[parameters('subnet2_Address_Prefix_Vnet2')]"
 					},
-					"NSG3-name": {
-						"value": "[parameters('NSG3-name-replica')]"
+					"subnet3_Address_Prefix": {
+						"value": "[parameters('subnet3_Address_Prefix_Vnet2')]"
 					},
-					"subnet1-AddressPrefix": {
-						"value": "[parameters('subnet1-AddressPrefix-Vnet2')]"
+					"NSG1_name": {
+						"value": "[parameters('NSG1_name_replica')]"
 					},
-					"subnet2-AddressPrefix": {
-						"value": "[parameters('subnet2-AddressPrefix-Vnet2')]"
+					"NSG2_name": {
+						"value": "[parameters('NSG2_name_replica')]"
 					},
-					"subnet3-AddressPrefix": {
-						"value": "[parameters('subnet3-AddressPrefix-Vnet2')]"
+					"NSG3_name": {
+						"value": "[parameters('NSG3_name_replica')]"
 					},
-					"firewallSubnet-AddressPrefix": {
-						"value": "[parameters('firewallSubnet-AddressPrefix-Vnet2')]"
+					"firewallSubnet_AddressPrefix": {
+						"value": "[parameters('firewallSubnet_AddressPrefix_Vnet2')]"
 					},
-					"Management-JumpBox_Subnet_Name": {
-						"value": "[parameters('Management-JumpBox_Subnet_Name-Vnet2')]"
+					"Management_JumpBox_Subnet_Name": {
+						"value": "[parameters('Management_JumpBox_Subnet_Name_Vnet2')]"
 					},
-					"Management-JumpBox_Subnet_AddressPrefix": {
-						"value": "[parameters('Management-JumpBox_Subnet_AddressPrefix-Vnet2')]"
+					"Management_JumpBox_Subnet_AddressPrefix": {
+						"value": "[parameters('Management_JumpBox_Subnet_AddressPrefix_Vnet2')]"
 					},
 					"enableDdosProtection": {
 						"value": "[parameters('enableDdosProtection')]"
@@ -461,8 +419,8 @@
 		{
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-05-01",
-			"name": "LinkedTemplate4",
-			"dependsOn": ["LinkedTemplate3", "LinkedTemplate2"],
+			"name": "LinkedTemplate5",
+			"dependsOn": ["LinkedTemplate3", "LinkedTemplate4"],
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
@@ -471,16 +429,16 @@
 				},
 				"parameters": {
 					"Virtual_Network1_name": {
-						"value": "[parameters('Virtual_Network1-name')]"
+						"value": "[parameters('Virtual_Network1_name')]"
 					},
 					"Virtual_Network2_name": {
-						"value": "[parameters('Virtual_Network2-name')]"
+						"value": "[parameters('Virtual_Network2_name')]"
 					},
 					"Allow_Virtual_Network_Access": {
-						"value": "[parameters('virtual-Network-Access')]"
+						"value": "[parameters('virtual_Network_Access')]"
 					},
 					"Allow_Forwarded_Traffic": {
-						"value": "[parameters('forwarded-Traffic')]"
+						"value": "[parameters('forwarded_Traffic')]"
 					},
 					"Allow_Gateway_Transit": {
 						"value": "[parameters('gateway-Transit')]"
@@ -493,4 +451,5 @@
 			}
 		}
 	]
+
 }
