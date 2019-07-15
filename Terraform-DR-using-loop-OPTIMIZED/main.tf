@@ -12,25 +12,21 @@ resource "azurerm_virtual_network" "deploy"{
     resource_group_name       = "${element(var.resource_group_name,count.index)}"
     
     subnet {
-    //count                     = "${length(var.location)}"
     name                      = "${element(var.subnet1_name,count.index)}"
     address_prefix            = "${element(var.subnet1-address,count.index)}"
     security_group            ="${element(azurerm_network_security_group.deploy1.*.id,count.index)}"
     }
     subnet {
-    //count                     = "${length(var.location)}"
     name                      = "${element(var.subnet2_name,count.index)}"
     address_prefix            = "${element(var.subnet2-address,count.index)}"
     security_group            ="${element(azurerm_network_security_group.deploy2.*.id,count.index)}"
     }
     subnet {
-   // count                     = "${length(var.location)}"
     name                      = "${element(var.subnet3_name,count.index)}"
     address_prefix            = "${element(var.subnet3-address,count.index)}"
     security_group            ="${element(azurerm_network_security_group.deploy3.*.id,count.index)}"
     }
     subnet {
-    //count                     = "${length(var.location)}"
     name                      = "${element(var.Management-JumpBox_Subnet_Name,count.index)}"
     address_prefix            = "${element(var.Management-JumpBox_Subnet_AddressPrefix,count.index)}"
     }
