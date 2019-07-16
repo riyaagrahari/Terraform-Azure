@@ -11,6 +11,8 @@ resource "azurerm_virtual_network" "deploy"{
     address_space             = ["${var.address_space}"]
     location                  = "${azurerm_resource_group.deploy.location}"
     resource_group_name       = "${azurerm_resource_group.deploy.name}"
+    depends_on                =  ["azurerm_resource_group.deploy","azurerm_network_security_group.deploy1","azurerm_network_security_group.deploy2","azurerm_network_security_group.deploy3"]
+   
     
     subnet {
     name                      = "${var.subnet1_name}"
@@ -42,6 +44,7 @@ resource "azurerm_virtual_network" "deploy-replica"{
     address_space             = ["${var.address_space-replica}"]
     location                  = "${azurerm_resource_group.deploy-replica.location}"
     resource_group_name       = "${azurerm_resource_group.deploy-replica.name}"
+     depends_on                =  ["azurerm_resource_group.deploy-replica","azurerm_network_security_group.deploy4","azurerm_network_security_group.deploy5","azurerm_network_security_group.deploy6"]
     
     subnet {
     name                      = "${var.subnet1_name-replica}"
@@ -71,6 +74,7 @@ resource "azurerm_network_security_group" "deploy1"{
     name                       = "${var.NSG-name1}"
     location                   = "${azurerm_resource_group.deploy.location}"
     resource_group_name        = "${azurerm_resource_group.deploy.name}"
+    depends_on                 = ["azurerm_resource_group.deploy"]
     security_rule {
     name                       = "HTTPorHTTPS-request"
     protocol                   = "Tcp"
@@ -132,6 +136,7 @@ resource "azurerm_network_security_group" "deploy2"{
     name                       = "${var.NSG-name2}"
     location                   = "${azurerm_resource_group.deploy.location}"
     resource_group_name        = "${azurerm_resource_group.deploy.name}"
+    depends_on                 = ["azurerm_resource_group.deploy"]
     security_rule {
     name                       = "Web-request-API"
     protocol                   = "Tcp"
@@ -203,6 +208,7 @@ resource "azurerm_network_security_group" "deploy3"{
     name                       = "${var.NSG-name3}"
     location                   = "${azurerm_resource_group.deploy.location}"
     resource_group_name        = "${azurerm_resource_group.deploy.name}"
+    depends_on                 = ["azurerm_resource_group.deploy"]
     security_rule {
     name                       = "API-DB-request"
     protocol                   = "Tcp"
@@ -288,6 +294,7 @@ resource "azurerm_network_security_group" "deploy4"{
     name                       = "${var.NSG-name1-replica}"
     location                   = "${azurerm_resource_group.deploy-replica.location}"
     resource_group_name        = "${azurerm_resource_group.deploy-replica.name}"
+    depends_on                 = ["azurerm_resource_group.deploy-replica"]
     security_rule {
     name                       = "HTTPorHTTPS-request"
     protocol                   = "Tcp"
@@ -349,6 +356,7 @@ resource "azurerm_network_security_group" "deploy5"{
     name                       = "${var.NSG-name2-replica}"
     location                   = "${azurerm_resource_group.deploy-replica.location}"
     resource_group_name        = "${azurerm_resource_group.deploy-replica.name}"
+    depends_on                = ["azurerm_resource_group.deploy-replica"]
     security_rule {
     name                       = "Web-request-API"
     protocol                   = "Tcp"
@@ -420,6 +428,7 @@ resource "azurerm_network_security_group" "deploy6"{
     name                       = "${var.NSG-name3-replica}"
     location                   = "${azurerm_resource_group.deploy-replica.location}"
     resource_group_name        = "${azurerm_resource_group.deploy-replica.name}"
+    depends_on                = ["azurerm_resource_group.deploy-replica"]
     security_rule {
     name                       = "API-DB-request"
     protocol                   = "Tcp"
@@ -506,7 +515,9 @@ resource "azurerm_virtual_network_peering" "Peering1" {
     allow_virtual_network_access = true
     allow_forwarded_traffic      = false
     allow_gateway_transit = false
+    depends_on = ["azurerm_virtual_network.deploy"]
 }
+
 resource "azurerm_virtual_network_peering" "Peering2" {
     name = "Peering2to1"
     resource_group_name       = "${azurerm_resource_group.deploy-replica.name}"
@@ -515,5 +526,7 @@ resource "azurerm_virtual_network_peering" "Peering2" {
     allow_virtual_network_access = true
     allow_forwarded_traffic      = false
     allow_gateway_transit = false
+    depends_on = ["azurerm_virtual_network.deploy-replica"]
 }
+
 

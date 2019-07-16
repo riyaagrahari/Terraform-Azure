@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "test" {
-    name     = "RG-01"
+    name     = "RG-DR-DEPLOY"
     location = "West US"
   }
   

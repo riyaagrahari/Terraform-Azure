@@ -172,7 +172,8 @@
 		},
 		
 		"enableDdosProtection": {
-			"type": "bool"
+			"type": "bool",
+			"defaultValue": false
 		},
 
 		"virtual_Network_Access": {
